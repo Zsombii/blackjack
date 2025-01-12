@@ -121,6 +121,12 @@ const playerCardsEl = document.getElementById("player-cards");
 
         function dealInitialCards() {
             betAmount = parseInt(betAmountEl.value) || 0;
+
+            if (betAmount < 100) {
+                betAmount = 100;
+                betAmountEl.value = 100;
+            }
+
             if (betAmount > balance) {
                 alert("Nincs elég egyenleged ehhez a téthez!");
                 return;
