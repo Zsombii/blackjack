@@ -68,15 +68,23 @@ const playerCardsEl = document.getElementById("player-cards");
             cards.forEach((card, index) => {
                 const cardEl = document.createElement("div");
                 cardEl.classList.add("card");
+                if (card.suit === "♥" || card.suit === "♦") {
+                    cardEl.classList.add("heart", "diamond");
+                } else if (card.suit === "♠" || card.suit === "♣") {
+                    cardEl.classList.add("spade", "club");
+                }
+        
                 if (hideFirst && index === 1) {
                     cardEl.classList.add("hidden");
                     cardEl.textContent = "";
                 } else {
                     cardEl.textContent = `${card.rank}${card.suit}`;
                 }
+                
                 container.appendChild(cardEl);
             });
         }
+        
 
         function checkWinner() {
             if (playerScore > 21) {

@@ -20,8 +20,20 @@ label{
     margin-top: 50px;
 }
 
+.dealer{
+    margin-top: 60px;
+}
+
 p{
     font-size: 30px;
+}
+
+.card.heart, .card.diamond {
+    color: red;
+}
+
+.card.spade, .card.club {
+    color: black;
 }
 
 #balance{
