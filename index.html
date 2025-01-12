@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bet">
+            <p>Egyenleg: <span id="balance">10000</span> Ft</p>
+            <label for="bet-amount">Tét: </label>
+            <input type="number" id="bet-amount" min="1" value="1000">
+        </div>
+        <div>
+            <div class="player">
+                <h2>Lapjaid:</h2>
+                <div class="cards" id="player-cards"></div>
+                <h3>Összérték: <span id="player-score">0</span></h3>
+            </div>
+        <div>
+            <h2>Osztó lapjai:</h2>
+            <div class="cards" id="dealer-cards"></div>
+            <h3>Összérték: <span id="dealer-score">0</span></h3>
+        </div>
+        <div class="buttons">
+            <button id="hit">Lap húzása</button>
+            <button id="stand">Megállás</button>
+            <button id="reset">Új játék</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
